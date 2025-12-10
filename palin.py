@@ -1,12 +1,12 @@
-import sys
+def is_palindrome(value):
+    # Convert everything to string safely
+    s = str(value).lower()
+    return s == s[::-1]
 
-if len(sys.argv) > 1:
-    string = sys.argv[1]
-else:
-    string = 202323
+# Fixed test value or replace with your own
+value = "Malayalam"
 
-# Check palindrome (case-insensitive)
-if string.lower() == string[::-1].lower():
-    print(f"'{string}' is a palindrome.")
+if is_palindrome(value):
+    print(f"'{value}' is a palindrome")
 else:
-    print(f"'{string}' is not a palindrome.")
+    print(f"'{value}' is not a palindrome")
